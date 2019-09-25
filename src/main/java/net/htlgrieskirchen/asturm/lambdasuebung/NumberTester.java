@@ -5,6 +5,8 @@
  */
 package net.htlgrieskirchen.asturm.lambdasuebung;
 
+import java.io.*;
+
 /**
  *
  * @author user
@@ -14,10 +16,26 @@ public class NumberTester
 
     public NumberTester(String fileName)
     {
+        FileReader reader = new FileReader(fileName);
+        BufferedReader br = new BufferedReader(reader);
+    }
+    
+    public void setOddEvenTester(NumberTest oddTester)
+    {
         
     }
     
-    public void setOddEvenTester(NumberTester oddTester)
+    public void setPrimeTester(NumberTest primeTester)
+    {
+        
+    }
+    
+    public void setPalindromeTester(NumberTest palidromeTester)
+    {
+        
+    }
+    
+    public void testFile()
     {
         
     }
