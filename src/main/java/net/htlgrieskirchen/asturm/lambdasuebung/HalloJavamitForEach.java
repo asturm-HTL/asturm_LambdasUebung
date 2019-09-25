@@ -23,16 +23,18 @@ public class HalloJavamitForEach
         stringList.add("David");
 
              System.out.println("---------------------for-each loop-------------------------------");
-
+             System.out.println(" ");
         
         for(String s : stringList) System.out.println(s);
         
              System.out.println("---------------------forEach method-------------------------------");
+             System.out.println(" ");
         
          stringList.forEach((String s) -> System.out.println(s));
         
              System.out.println("---------------------forEach method-reference---------------------");
-         stringList.forEach(System. out :: println );
+             System.out.println(" ");
+             stringList.forEach(System. out :: println );
 
 
         
