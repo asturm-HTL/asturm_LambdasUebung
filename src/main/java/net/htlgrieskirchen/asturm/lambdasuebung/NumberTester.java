@@ -4,17 +4,24 @@ import java.io.*;
 
 /**
  *
- * @author user
+ * @author asturm
  */
 public class NumberTester 
 {
 
-    String numberOfCommands; //First Line of the txt File will be stored in here. 
+    int numberOfCommandLines; //First Line of the txt File will be stored in here. 
     
-    public NumberTester(String fileName) throws FileNotFoundException
+    public NumberTester(String fileName) throws FileNotFoundException, IOException
     {
         BufferedReader br = new BufferedReader(new FileReader(fileName));
             //fileName would be: " C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt "
+        numberOfCommandLines = Integer.parseInt(br.readLine());
+        
+        for(int i = 0; i<=numberOfCommandLines; i++)
+        {
+            
+            
+        }
         
     }
     
