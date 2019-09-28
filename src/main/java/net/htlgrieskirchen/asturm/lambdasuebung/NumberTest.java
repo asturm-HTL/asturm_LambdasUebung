@@ -7,8 +7,11 @@ package net.htlgrieskirchen.asturm.lambdasuebung;
 
 /**
  *
- * @author user
+ * @author asturm
  */
-public interface NumberTest {
+public interface NumberTest 
+{
+
+    boolean testNumber(int number);
     
 }
