@@ -17,24 +17,34 @@ public class NumberTester
     
     public NumberTester(String fileName) throws FileNotFoundException, IOException
     {
+        
         BufferedReader br = new BufferedReader(new FileReader(fileName));
             // fileName would be: "C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt "
         numberOfCommandLines = Integer.parseInt(br.readLine());
-        
+
+       
+
         for(int i = 0; i<=numberOfCommandLines; i++)
         {
-            
+
             if(i != 0)
             {
-                
+
                 commandStrings.add(br.readLine().toString()); 
-                
+
+                /*commandsAsStrings[i] = br.readLine();
+                System.out.println(commandsAsStrings[i]);*/
             }
-            
-            
+
+
         }
-            String[] splittedCommandString = commandStrings.get(0).split(" ", 2); 
+        System.out.println(commandStrings);
         
+        String[] splittedCommandString = commandStrings.get(0).split(" ", 2);
+        System.out.println("split: "+ splittedCommandString[0]);
+
+
+    
     }
     
     public void setOddEvenTester(NumberTest oddTester)
