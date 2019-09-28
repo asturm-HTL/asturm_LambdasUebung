@@ -14,24 +14,29 @@ public class NumberTester
 
     public static  int numberOfCommandLines; //First Line of the txt File will be stored in here. 
     //public static String[] commandsAsStrings; //The Following lines will be stored in here before they get split.
-    //public static String commandLines;
+    
     
     public NumberTester(String fileName) throws FileNotFoundException, IOException
     {
-        /*BufferedReader br = new BufferedReader(new FileReader(fileName));
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
             //fileName would be: 
         numberOfCommandLines = Integer.parseInt(br.readLine());
+        
+        ArrayList<String> result = new ArrayList<>();
         
         for(int i = 0; i<=numberOfCommandLines; i++)
         {
             
             if(i != 0)
             {
-                commandsAsStrings[i] = br.readLine();
-                System.out.println(commandsAsStrings[i]);
+                
+                result.add(br.readLine().toString());
+                
+                /*commandsAsStrings[i] = br.readLine();
+                System.out.println(commandsAsStrings[i]);*/
             }
             
-        }*/
+        }
         
     }
     
@@ -69,37 +74,6 @@ public class NumberTester
         
         //for tests
         
-        StringBuilder sb = new StringBuilder();
-        String commandLines = "";
-        List<String> list = new ArrayList<String>();
-        
-       try{ 
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt"));
-            //fileName would be: " C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt "
-        numberOfCommandLines = Integer.parseInt(br.readLine());
-        
-        for(int i = 0; i<=numberOfCommandLines; i++)
-        {
-            
-            if(i != 0)
-            {
-               commandLines = br.readLine();
-               sb.append(commandLines);
-               sb.append(System.lineSeparator());
-               commandLines = br.readLine();
-               list.add(commandLines);      
-            }
-            System.out.println(Arrays.toString(list.toArray()));
-                br.close();
-            
-            
-        }
-       }
-       catch (FileNotFoundException e) {
-            System.err.println("File not found");
-        } catch (IOException e) {
-            System.err.println("Unable to read the file.");
-        }
-        
+ 
     }
 }
