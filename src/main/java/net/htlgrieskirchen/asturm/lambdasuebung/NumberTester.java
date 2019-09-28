@@ -19,7 +19,7 @@ public class NumberTester
     public NumberTester(String fileName) throws FileNotFoundException, IOException
     {
         BufferedReader br = new BufferedReader(new FileReader(fileName));
-            //fileName would be: 
+            // fileName would be: "C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt "
         numberOfCommandLines = Integer.parseInt(br.readLine());
         
         ArrayList<String> result = new ArrayList<>();
@@ -37,6 +37,7 @@ public class NumberTester
             }
             
         }
+        System.out.println(result);
         
     }
     
@@ -69,11 +70,11 @@ public class NumberTester
     }
     
     
-    public static void main(String[] args) throws FileNotFoundException, IOException 
+    public static void main(String[] args) throws IOException 
     {
         
         //for tests
         
- 
+        NumberTester nt = new NumberTester("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt ");
     }
 }
