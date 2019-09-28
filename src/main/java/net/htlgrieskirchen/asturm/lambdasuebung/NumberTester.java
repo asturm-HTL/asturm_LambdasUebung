@@ -40,8 +40,15 @@ public class NumberTester
         }
         System.out.println(commandStrings);
         
-        String[] splittedCommandString = commandStrings.get(0).split(" ", 2);
-        System.out.println("split: "+ splittedCommandString[0]);
+        //String[] splittedCommandString = commandStrings.get(0).split(" ", 2);
+        //System.out.println("split: "+ splittedCommandString[0]);
+        
+        for(int i = 0; i<5; i++)
+        {
+            String[] splittedCommandString = commandStrings.get(i).split(" ", 2);
+            System.out.println("split: "+ splittedCommandString[0]);
+        }
+        
 
 
     
