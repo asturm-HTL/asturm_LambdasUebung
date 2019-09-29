@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author asturm
  */
-public class NumberTester 
+public class NumberTester implements NumberTest
 {
 
     private static  int numberOfCommandLines; //First Line of the txt File will be stored in here. 
@@ -49,9 +49,19 @@ public class NumberTester
             System.out.println("split: "+ splittedCommandString[0]);
             
             int commandNumbers = Integer.parseInt(splittedCommandString[0]);
-            if(commandNumbers == 1)
-            {
-                setOddEvenTester();
+            int testingNumbers = Integer.parseInt(splittedCommandString[1]);
+                     
+            switch(commandNumbers)
+            {              
+                case 1: 
+                    setOddEvenTester();
+                    break;
+                case 2:
+                    setPrimeTester();
+                    break;
+                case 3: 
+                    setPalindromeTester();
+                    break;
             }
         }
         
@@ -68,7 +78,7 @@ public class NumberTester
         
     }
     
-    public void setPrimeTester(NumberTest primeTester)
+    public void setPrimeTester(/*NumberTest primeTester*/)
     {
         
         System.out.println("des is da primzoin tester");
@@ -76,7 +86,7 @@ public class NumberTester
         
     }
     
-    public void setPalindromeTester(NumberTest palidromeTester)
+    public void setPalindromeTester(/*NumberTest palindromeTester*/)
     {
         
         System.out.println("palindrom oida");
@@ -96,5 +106,10 @@ public class NumberTester
         
         //for tests
         NumberTester nt = new NumberTester("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt ");
+    }
+
+    @Override
+    public boolean testNumber(int number) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
