@@ -43,10 +43,16 @@ public class NumberTester
         //String[] splittedCommandString = commandStrings.get(0).split(" ", 2);
         //System.out.println("split: "+ splittedCommandString[0]);
         
-        for(int i = 0; i<5; i++)
+        for(int i = 0; i<numberOfCommandLines; i++)
         {
             String[] splittedCommandString = commandStrings.get(i).split(" ", 2);
             System.out.println("split: "+ splittedCommandString[0]);
+            
+            int commandNumbers = Integer.parseInt(splittedCommandString[0]);
+            if(commandNumbers == 1)
+            {
+                setOddEvenTester();
+            }
         }
         
 
@@ -54,24 +60,26 @@ public class NumberTester
     
     }
     
-    public void setOddEvenTester(NumberTest oddTester)
+    public void setOddEvenTester(/*NumberTest oddTester*/)
     {
         
-        
+        System.out.println("Des is da ungerade/grade zoin tester");
+               
         
     }
     
     public void setPrimeTester(NumberTest primeTester)
     {
         
-        
+        System.out.println("des is da primzoin tester");
+               
         
     }
     
     public void setPalindromeTester(NumberTest palidromeTester)
     {
         
-        
+        System.out.println("palindrom oida");
         
     }
     
