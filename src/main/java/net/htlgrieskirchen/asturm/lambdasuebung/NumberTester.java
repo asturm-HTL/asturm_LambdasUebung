@@ -9,11 +9,13 @@ import java.util.List;
  *
  * @author asturm
  */
-public class NumberTester implements NumberTest
+public class NumberTester
 {
 
     private static  int numberOfCommandLines; //First Line of the txt File will be stored in here. 
     private static ArrayList<String> commandStrings = new ArrayList<>();
+    private static int commandNumbers;
+    private static int testingNumbers;
     
     public NumberTester(String fileName) throws FileNotFoundException, IOException
     {
@@ -48,22 +50,36 @@ public class NumberTester implements NumberTest
             String[] splittedCommandString = commandStrings.get(i).split(" ", 2);
             System.out.println("split: "+ splittedCommandString[0]);
             
-            int commandNumbers = Integer.parseInt(splittedCommandString[0]);
-            int testingNumbers = Integer.parseInt(splittedCommandString[1]);
-                     
-            switch(commandNumbers)
-            {              
-                case 1: 
-                    setOddEvenTester();
-                    break;
-                case 2:
-                    setPrimeTester();
-                    break;
-                case 3: 
-                    setPalindromeTester();
-                    break;
-            }
+            commandNumbers = Integer.parseInt(splittedCommandString[0]);
+            testingNumbers = Integer.parseInt(splittedCommandString[1]);
+                    
+                    
+            NumberTest ntInterface = new NumberTest() 
+            {
+                @Override
+                public boolean testNumber(int number) 
+                {    
+
+                    switch(number)
+                    {              
+                        case 1: 
+                            setOddEvenTester();
+                            break;
+                        case 2:
+                            setPrimeTester();
+                            break;
+                        case 3: 
+                            setPalindromeTester();
+                            break;
+                    }
+                    return true;
+                }
+            };
+        
+            ntInterface.testNumber(commandNumbers);
         }
+
+        
         
 
 
@@ -108,8 +124,5 @@ public class NumberTester implements NumberTest
         NumberTester nt = new NumberTester("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt ");
     }
 
-    @Override
-    public boolean testNumber(int number) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 }
