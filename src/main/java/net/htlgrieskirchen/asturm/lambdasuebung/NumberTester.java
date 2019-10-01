@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author asturm
  */
-public class NumberTester
+public class NumberTester implements NumberTest
 {
 
     private static  int numberOfCommandLines; //First Line of the txt File will be stored in here. 
@@ -122,6 +122,12 @@ public class NumberTester
         
         //for tests
         NumberTester nt = new NumberTester("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt ");
+    }
+
+    @Override
+    public boolean testNumber(int number) {
+        return true;
+        
     }
 
 
