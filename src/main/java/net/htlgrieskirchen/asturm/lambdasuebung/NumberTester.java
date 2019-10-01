@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author asturm
  */
-public class NumberTester implements NumberTest
+public class NumberTester
 {
 
     private static  int numberOfCommandLines; //First Line of the txt File will be stored in here. 
@@ -89,7 +89,7 @@ public class NumberTester implements NumberTest
     public void setOddEvenTester(/*NumberTest oddTester*/)
     {
         
-        System.out.println("Des is da ungerade/grade zoin tester");
+        System.out.println("This is the OddEvenTester");
                
         
     }
@@ -97,7 +97,7 @@ public class NumberTester implements NumberTest
     public void setPrimeTester(/*NumberTest primeTester*/)
     {
         
-        System.out.println("des is da primzoin tester");
+        System.out.println("This is the PrimeTester");
                
         
     }
@@ -105,14 +105,14 @@ public class NumberTester implements NumberTest
     public void setPalindromeTester(/*NumberTest palindromeTester*/)
     {
         
-        System.out.println("palindrom oida");
+        System.out.println("This is the PalindromeTester");
         
     }
     
-    public void testFile()
+    public void testFile() throws IOException
     {
         
-        
+        // NumberTester nt = new NumberTester("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt ");
         
     }
     
@@ -123,12 +123,5 @@ public class NumberTester implements NumberTest
         //for tests
         NumberTester nt = new NumberTester("C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung\\numbertester_input.txt ");
     }
-
-    @Override
-    public boolean testNumber(int number) {
-        return true;
-        
-    }
-
 
 }

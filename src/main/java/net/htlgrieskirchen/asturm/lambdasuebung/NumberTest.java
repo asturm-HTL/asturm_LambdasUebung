@@ -9,6 +9,7 @@ package net.htlgrieskirchen.asturm.lambdasuebung;
  *
  * @author asturm
  */
+@FunctionalInterface
 public interface NumberTest 
 {
 
